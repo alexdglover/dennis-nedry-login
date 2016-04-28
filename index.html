@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Title This Page :)</title>
+	
+	<!-- jQuery: Grab Google CDN jQuery. fall back to local if necessary -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script>!window.jQuery && document.write('<script src="jquery-1.4.1.min.js"><\/script>')</script>
+	
+	<!-- The dennis-nedry-login js file  -->
+	<script src="jquery.dennis-nedry-login.1.0.js"></script>
+	
+	<!-- For the button version -->
+	<script type="text/javascript">
+		$(window).load(function() {
+			$('.button').launchDennisNedry();
+		});
+	</script>
+	
+	<!-- For the Konami Code version -->
+	<script type="text/javascript">
+		$(window).load(function() {
+			$('.button').launchDennisNedry({
+				'enterOn' : 'konami-code'
+			});
+		});
+	</script>
+	
+	<!-- For the Timer version -->
+	<!-- <script type="text/javascript">
+		$(window).load(function() {
+			$('.button').launchDennisNedry({
+				'enterOn' : 'timer',
+				'delayTime' : 2000
+			});
+		});
+	</script>	
+	-->
+
+</head>
+<body>
+	<h1>Log In</h1>
+	<p>Username:</p>
+	<input type="text" />
+	<p>Password:</p>
+	<input type="password" /><br>
+	<input type="button" class="button" value="Log In" /><br>
+	
+	<p>Use any username and password to log in, this is a mock log-in page to demonstrate functionality of a failed login. Don't forget to turn up your volume :)</p>
+	
+	<p>Or <a href="#" class="button">click me</a> to activate the Dennis Nedry Login plugin.</p>
+	<p>You can also use the Konami-Code (on your keyboard type &uarr; &uarr; &darr; &darr; &larr; &rarr; &larr; &rarr; B A)</p>
+	
+</body>
+</html>
