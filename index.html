@@ -1,56 +1,106 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8" />
-	<title>Title This Page :)</title>
-	
-	<!-- jQuery: Grab Google CDN jQuery. fall back to local if necessary -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-	<script>!window.jQuery && document.write('<script src="jquery-1.4.1.min.js"><\/script>')</script>
-	
-	<!-- The dennis-nedry-login js file  -->
-	<script src="jquery.dennis-nedry-login.1.0.js"></script>
-	
-	<!-- For the button version -->
-	<script type="text/javascript">
-		$(window).load(function() {
-			$('.button').launchDennisNedry();
-		});
-	</script>
-	
-	<!-- For the Konami Code version -->
-	<script type="text/javascript">
-		$(window).load(function() {
-			$('.button').launchDennisNedry({
-				'enterOn' : 'konami-code'
-			});
-		});
-	</script>
-	
-	<!-- For the Timer version -->
-	<!-- <script type="text/javascript">
-		$(window).load(function() {
-			$('.button').launchDennisNedry({
-				'enterOn' : 'timer',
-				'delayTime' : 2000
-			});
-		});
-	</script>	
-	-->
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Title This Page :)</title>
+
+  <!-- jQuery: Grab Google CDN jQuery. fall back to local if necessary -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script>!window.jQuery && document.write('<script src="jquery-1.4.1.min.js"><\/script>')</script>
+
+  <!-- The dennis-nedry-login js file  -->
+  <script src="jquery.dennis-nedry-login.1.0.js"></script>
+
+  <!-- For the button version -->
+  <script type="text/javascript">
+    $(window).load(function() {
+      $('.nedry-button').launchDennisNedry();
+    });
+  </script>
+
+  <!-- For the Konami Code version -->
+  <script type="text/javascript">
+    $(window).load(function() {
+      $('.nedry-button').launchDennisNedry({
+        'enterOn' : 'konami-code'
+      });
+    });
+  </script>
+
+  <!-- For the Timer version -->
+  <!-- <script type="text/javascript">
+    $(window).load(function() {
+      $('.nedry-button').launchDennisNedry({
+        'enterOn' : 'timer',
+        'delayTime' : 2000
+      });
+    });
+  </script>
+  -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="signin.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 </head>
 <body>
-	<h1>Log In</h1>
-	<p>Username:</p>
-	<input type="text" />
-	<p>Password:</p>
-	<input type="password" /><br>
-	<input type="button" class="button" value="Log In" /><br>
-	
-	<p>Use any username and password to log in, this is a mock log-in page to demonstrate functionality of a failed login. Don't forget to turn up your volume :)</p>
-	
-	<p>Or <a href="#" class="button">click me</a> to activate the Dennis Nedry Login plugin.</p>
-	<p>You can also use the Konami-Code (on your keyboard type &uarr; &uarr; &darr; &darr; &larr; &rarr; &larr; &rarr; B A)</p>
-	
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Dennis Nedry Failed Login Demo</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control" style="cursor: auto; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; background-repeat: no-repeat;">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; background-repeat: no-repeat;">
+            </div>
+            <button type="submit" class="nedry-button btn btn-success">Sign in</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+  </nav>
+
+  <div class="jumbotron">
+      <div class="container">
+        <h1>Hello, world!</h1>
+        <p>This page serves as an example of how to use the Dennis Nedry Login JS. Just attempt to log in with the form below or in the nav bar at the top of the screen with any credentials.</p>
+        <p>Or <a href="#" class="nedry-button">click me</a> to activate the Dennis Nedry Login plugin.</p>
+        <p>You can also use the Konami-Code (on your keyboard type &uarr; &uarr; &darr; &darr; &larr; &rarr; &larr; &rarr; B A)</p>
+        <p><a class="btn btn-primary btn-lg" href="https://github.com/alexdglover/dennis-nedry-login" role="button">View on GitHub »</a></p>
+      </div>
+    </div>
+  <div class="container">
+    <form class="form-signin">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="text" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="nedry-button btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
+  </div>
+
 </body>
 </html>
