@@ -61,9 +61,9 @@
 					"bottom" : "0"
 				}, function() { 			
 					$(this).animate({
-						"bottom" : "-130px"
+						"bottom" : "-0px"
 					}, 100, function() {
-						var offset = (($(this).position().left)+400);
+						var offset = (($(this).position().left)+800);
 						$(this).delay(300).animate({
 							"right" : offset
 						}, 2200, function() {
